@@ -1,6 +1,6 @@
 from spotipy.oauth2 import SpotifyClientCredentials
 import spotipy
-import pandas as pd
+import pandas
 
 # Spotify API credentials
 client_id = "client_id"
@@ -96,8 +96,8 @@ def main():
     all_albums = get_all_albums(sp, artist['id'])
 
     # Create DataFrames for tracks and albums
-    df_tracks = pd.DataFrame(all_tracks)
-    df_albums = pd.DataFrame(all_albums)
+    df_tracks = pandas.DataFrame(all_tracks)
+    df_albums = pandas.DataFrame(all_albums)
 
     # Print information
     print_artist_info(artist, len(all_tracks), len(all_albums))
